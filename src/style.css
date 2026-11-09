@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #eef5fb;
+  color: #172b4d;
+  min-width: 320px;
+}
+
+button, input {
+  font: inherit;
+}
+
+.page-shell {
+  min-height: 100vh;
+  padding: 30px 24px;
+  background:
+    radial-gradient(circle at top right, #d6ecff, transparent 35%),
+    #eef5fb;
+}
+
+/* CABEÇALHO */
+
+.site-header {
+  max-width: 1050px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #173d70;
+  font-size: 23px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.brand-mark {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: #d9edff;
+  color: #2686d8;
+  font-size: 25px;
+}
+
+.brand-light {
+  color: #3798e8;
+  font-weight: 500;
+}
+
+.header-caption {
+  color: #8296ad;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* TÍTULO */
+
+.intro {
+  max-width: 650px;
+  margin: 85px auto 35px;
+  text-align: center;
+}
+
+.eyebrow {
+  color: #398bd0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.intro .eyebrow {
+  margin-bottom: 18px;
+}
+
+h1 {
+  color: #17365d;
+  font-size: clamp(40px, 6vw, 65px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -3px;
+}
+
+h1 span {
+  color: #399be9;
+}
+
+.intro-copy {
+  margin-top: 18px;
+  color: #8295aa;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* PESQUISA */
+
+.search-bar {
+  width: min(100%, 600px);
+  margin: auto;
+  padding: 9px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #e2ebf4;
+  border-radius: 17px;
+  background: white;
+  box-shadow: 0 12px 35px rgba(48, 92, 135, .08);
+}
+
+.search-icon {
+  padding-left: 10px;
+  color: #7f9bb8;
+  font-size: 27px;
+}
+
+.search-bar input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #17365d;
+  font-size: 14px;
+}
+
+.search-bar input::placeholder {
+  color: #a4b3c3;
+}
+
+.search-bar button {
+  padding: 13px 22px;
+  border: none;
+  border-radius: 12px;
+  background: #348fe0;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.search-bar button:hover:not(:disabled) {
+  background: #2077c4;
+  transform: translateY(-2px);
+}
+
+.search-bar button:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+}
+
+/* RESULTADO */
+
+.result-area {
+  min-height: 330px;
+  padding-top: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.weather-card {
+  width: min(100%, 600px);
+  padding: 30px;
+  border: 1px solid #e6eef6;
+  border-radius: 25px;
+  background: white;
+  box-shadow: 0 18px 50px rgba(46, 91, 137, .10);
+}
+
+.weather-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.weather-top .eyebrow {
+  margin-bottom: 9px;
+}
+
+.weather-top h2 {
+  color: #17365d;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.region {
+  margin-top: 5px;
+  color: #91a1b2;
+  font-size: 13px;
+}
+
+.weather-icon {
+  width: 90px;
+  height: 90px;
+  display: grid;
+  place-items: center;
+  border-radius: 25px;
+  background: #fff5d9;
+  font-size: 55px;
+}
+
+/* TEMPERATURA */
+
+.temperature-area {
+  padding: 28px 0;
+  text-align: center;
+}
+
+.temperature {
+  color: #17365d;
+  font-size: clamp(75px, 12vw, 100px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -7px;
+}
+
+.temperature span {
+  color: #399be9;
+  font-size: 38px;
+  vertical-align: top;
+  letter-spacing: -2px;
+}
+
+.condition {
+  margin-top: 12px;
+  color: #348fe0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.feels-like {
+  margin-top: 7px;
+  color: #91a1b2;
+  font-size: 13px;
+}
+
+/* INFORMAÇÕES */
+
+.weather-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding-top: 23px;
+  border-top: 1px solid #edf1f5;
+}
+
+.detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.detail-icon {
+  font-size: 24px;
+}
+
+.detail div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.detail-label {
+  color: #91a1b2;
+  font-size: 11px;
+}
+
+.detail strong {
+  color: #28496c;
+  font-size: 14px;
+}
+
+.updated {
+  margin-top: 23px;
+  color: #a5b2c0;
+  font-size: 11px;
+  text-align: center;
+}
+
+/* MENSAGENS */
+
+.status-message {
+  width: min(100%, 600px);
+  padding: 20px;
+  border: 1px solid #e0ebf5;
+  border-radius: 15px;
+  background: white;
+  color: #54708e;
+  text-align: center;
+  font-size: 14px;
+}
+
+.status-message.error {
+  color: #bd4141;
+  background: #fff0f0;
+  border-color: #f5cccc;
+}
+
+/* RODAPÉ */
+
+.site-footer {
+  max-width: 1050px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+  color: #91a1b2;
+  font-size: 12px;
+}
+
+.site-footer a {
+  color: #348fe0;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+  .page-shell {
+    padding: 22px 16px;
+  }
+
+  .header-caption {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .intro {
+    margin: 65px auto 30px;
+  }
+
+  h1 {
+    letter-spacing: -2px;
+  }
+
+  .intro-copy {
+    font-size: 13px;
+  }
+
+  .search-bar {
+    gap: 7px;
+    padding: 7px;
+  }
+
+  .search-bar input {
+    font-size: 12px;
+  }
+
+  .search-bar button {
+    padding: 12px;
+    font-size: 12px;
+  }
+
+  .weather-card {
+    padding: 22px 17px;
+  }
+
+  .weather-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 43px;
+  }
+
+  .weather-top h2 {
+    font-size: 21px;
+  }
+
+  .weather-details {
+    gap: 5px;
+  }
+
+  .detail {
+    gap: 5px;
+  }
+
+  .detail-icon {
+    font-size: 19px;
+  }
+
+  .detail-label {
+    font-size: 9px;
+  }
+
+  .detail strong {
+    font-size: 11px;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 360px) {
+  .detail {
+    flex-direction: column;
+    text-align: center;
+  }
+}
